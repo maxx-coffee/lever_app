@@ -29,10 +29,10 @@ class Tweet < ActiveRecord::Base
     end
 
     def check_schedule
-      #@jobs = Delayed::Job.find(:all, :conditions => ["queue=?", 1]).count
-      #if @jobs <= 0
+      @jobs = Delayed::Job.find(:all, :conditions => ["queue=?", 1]).count
+      if @jobs <= 0
         self.schedule_tweets
-     # end
+      end
     end
 
     def destroy_job
