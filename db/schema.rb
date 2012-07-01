@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120630202735) do
+ActiveRecord::Schema.define(:version => 20120701053909) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20120630202735) do
     t.datetime "locked_at"
     t.datetime "failed_at"
     t.string   "locked_by"
-    t.string   "queue"
+    t.integer  "queue"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
     t.integer  "tweet_id"
@@ -73,13 +73,13 @@ ActiveRecord::Schema.define(:version => 20120630202735) do
   create_table "tweet_queues", :force => true do |t|
     t.string   "time_period"
     t.datetime "last_run"
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "admin_user_id"
     t.string   "token"
     t.string   "secret"
-    t.time     "start_time",    :default => '2000-01-01 00:00:00'
-    t.time     "end_time",      :default => '2000-01-01 00:00:00'
+    t.time     "start_time"
+    t.time     "end_time"
   end
 
   create_table "tweets", :force => true do |t|
