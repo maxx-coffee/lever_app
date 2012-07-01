@@ -1,0 +1,20 @@
+# pack-refs with: peeled 
+6ab19c6c9a287f9b68d948fe0087687f16276be2 refs/tags/v0.6.7
+58dc69bed9470711889222f968706984c0a6d193 refs/tags/v0.6.6
+82b298a2ebf0970aa5e586be1d62b6990ed48f59 refs/tags/v0.6.5
+e4d51a41ff00f469c340fcabc796af5436a0916e refs/tags/v0.6.4
+52a66440b5ed0a3ae74689246d5782589039f587 refs/tags/v0.6.3
+edd4eadb3f04f1cab6d66382d0b6eef2da1f354c refs/tags/v0.6.2
+40c0efa922d8e9a4d3742c44472157d773787d66 refs/tags/v0.6.1
+4cf24f3f5e2ca9d1cc00516ce44059c56d1c92b2 refs/tags/v0.6.0
+abfd857d76854722ee29b11901929bf1c8adb7bc refs/tags/v0.5.0
+5a6aa49f3713f3110deb243fea41873a49dc44bf refs/tags/v0.4.4
+d7ac0555940750303b645d2eb7ef9bffc41f88d1 refs/tags/v0.4.3
+01be01b623bc964afc3a0ea03f9fd5fa168efb08 refs/tags/v0.4.2
+baff1444b4899662c44e219e880415cbb0379ff8 refs/tags/v0.4.1
+3f03c04998eb637c3489824211b8d096ccea0908 refs/tags/v0.4.0
+ddb24ba3d0115de2d01f05cf49618865186161ce refs/tags/v0.3.0
+53b62a98d886c29389ba9cbe5c37a082f8731423 refs/heads/master
+bd9ff2d8336577f9e04ef7da25fe7bccfe9d5680 refs/heads/handle_sd_sm
+49aa8d96614b4b3c3476b91d727e57725fbc3f6b refs/heads/feature/week-and-a-day
+8763f5d71eb5f0575cd7c11e5cbee80658c3e704 refs/heads/develop
