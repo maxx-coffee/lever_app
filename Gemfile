@@ -20,6 +20,7 @@ gem 'activeadmin'
 gem 'formtastic'
 gem 'chronic', :git => 'git://github.com/mojombo/chronic.git'
 
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -30,6 +31,11 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
 end
 
 gem 'jquery-rails'
