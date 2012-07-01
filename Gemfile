@@ -14,7 +14,7 @@ gem 'delayed_job_active_record'
 gem 'activeadmin'
 gem 'formtastic'
 gem 'chronic', :git => 'git://github.com/mojombo/chronic.git'
-gem install activerecord-postgresql-adapter
+
 
 # Gems used only for assets and not required
 # in production environments by default.
