@@ -6,6 +6,7 @@ LeverApp::Application.routes.draw do
   match "/auth/twitter/callback" => "tweets#auth"
   match "/send_tweet" => "tweets#send_tweet"
   match "/tweets/show" => "tweets#show"
+  match "/destroy_job" => "tweets#delete_jobs"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

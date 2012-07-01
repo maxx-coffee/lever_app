@@ -20,4 +20,11 @@ class TweetsController < ApplicationController
   	Tweet.schedule_tweets
   end
 
+  def delete_jobs
+  	@jobs = Delayed::Job.find(:all)
+  	@jobs.each do |job|
+  		job.destroy
+  	end
+  end
+
 end
