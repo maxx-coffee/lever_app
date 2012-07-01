@@ -1,13 +1,12 @@
 class ChangeDataForQueue < ActiveRecord::Migration
   def self.up
-    change_table :delayed_jobs do |t|
-      t.change :queue, :integer
-    end
+
+    remove_column :delayed_jobs, :queue
+    add_column :delayed_jobs, :queue, :integer
   end
 
   def self.down
-    change_table :delayed_jobs do |t|
-      t.change :queue, :integer
-    end
+    remove_column :delayed_jobs, :queue
+    add_column :delayed_jobs, :queue, :string
   end
 end
