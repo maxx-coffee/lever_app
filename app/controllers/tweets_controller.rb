@@ -12,8 +12,7 @@ class TweetsController < ApplicationController
 
   def show
   	@queue = TweetQueue.find(1)
-  	
-  	@chronic = Chronic.parse('now') 
+  	@chronic = Chronic.parse('today') 
   end
 
 
