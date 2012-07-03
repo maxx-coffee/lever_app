@@ -1,3 +1,14 @@
+<%
+@queue.each do |queue|
+@start_time = queue.start_time.in_time_zone(queue.timezone)
+@end_time = queue.end_time.in_time_zone(queue.timezone)
+%>
+<%= Time.zone = queue.timezone %><br>
+<%= Time.now  %><br>
 
-
-<%= @chronic%>
+<%= @start_time %><br>
+<% Time.zone = queue.timezone%>
+<%= Chronic.parse('today '+@start_time.strftime('%H:%M')).in_time_zone  %><br><br>
+<%= @end_time %><br>
+<%= Chronic.parse('today '+@end_time.strftime('%H:%M')).in_time_zone %><br>
+<% end %>

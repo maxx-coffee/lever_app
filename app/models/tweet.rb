@@ -46,9 +46,12 @@ class Tweet < ActiveRecord::Base
       @queue = TweetQueue.find(:all)
       
       @queue.each do |queue|
-        
+        Time.zone = queue.timezone
+        Chronic.time_class = Time.zone
         queue.tweets.each do |tweet|
-          time = rand_time(Chronic.parse('today '+queue.start_time.strftime('%H:%M').to_s).utc ,Chronic.parse('today '+queue.end_time.strftime('%H:%M').to_s).utc )
+          @start_time = queue.start_time
+          @end_time = queue.end_time
+          time = rand_time(Chronic.parse('today '+@start_time.strftime('%H:%M')).in_time_zone ,Chronic.parse('today '+@end_time.strftime('%H:%M')).in_time_zone)
           self.delay(:run_at => time, :queue => '1', :tweet_id => tweet.id).send_tweet(tweet)
       end
       end

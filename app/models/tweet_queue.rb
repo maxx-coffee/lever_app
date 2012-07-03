@@ -1,5 +1,5 @@
 class TweetQueue < ActiveRecord::Base
-  attr_accessible :token, :secret, :start_time,:end_time,:admin_user_id,:last_run
+  attr_accessible :token, :secret, :start_time,:end_time,:admin_user_id,:last_run, :timezone
   belongs_to :admin_user
   has_many :tweets
 

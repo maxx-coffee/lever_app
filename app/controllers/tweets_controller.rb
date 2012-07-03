@@ -11,7 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def show
-  	@queue = TweetQueue.find(1)
+  	@queue = TweetQueue.find(:all)
   	@chronic = Chronic.parse('today') 
   end
 
